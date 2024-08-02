@@ -2,24 +2,33 @@ import './App.css';
 
 function App() {
   
-  const atividade =
+  const atividades =
   [
     {
-      "id":1,
+      "id": 1,
       "descricao":"Primeira Atividade"
-    }
+    },
+    {
+      "id": 2,
+      "descricao":"Segunda Atividade"
+    },
   ]
-  
-  
+    
   return (
+<>
+    <form>
+        <input id="id" type="text" placeholder="id" />
+        <input id="descricao" type="text" placeholder="descricao" />
+        <button>+ Atividade</button>
+    </form>
     <div className="mt-3">             
         <ul class="list-group">
-          <li className="list-group-item">{atividade[0].id} {atividade[0].descricao}</li>
-          <li className="list-group-item">Segunda Atividade</li>
-          <li className="list-group-item">Terceira Atividade</li>
-          <li className="list-group-item">Quarta Atividade</li>
+          {atividades.map( ativ =>(
+            <li key={ativ.id} className="list-group-item">{ativ.id} - {ativ.descricao}</li>
+          ))}                   
         </ul>      
     </div>
+    </>
   );
 }
 
