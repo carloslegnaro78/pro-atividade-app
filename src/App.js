@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import { useState } from 'react';
 import './App.css';
 
 let initialState = [
@@ -28,7 +28,7 @@ function App() {
     };
     atividades.push(atividade);
     console.log(atividades);
-    setAtividades(atividades);
+    setAtividades([...atividades]);
 
   }
     
