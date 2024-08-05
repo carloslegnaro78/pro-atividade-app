@@ -1,8 +1,7 @@
+import {useState} from 'react';
 import './App.css';
 
-function App() {
-  
-  const atividades =
+let initialState = [
   [
     {
       "id": 1,
@@ -13,14 +12,24 @@ function App() {
       "descricao":"Segunda Atividade"
     },
   ]
+];
 
+function App() {
+  
+  const[atividades, setAtividades] = useState(initialState)
+ 
+  
   function addAtiviade(e) {
     e.preventDefault();
+
     const atividade = {
       id: document.getElementById('id').value,
       descricao: document.getElementById('descricao').value,
-    }
+    };
     atividades.push(atividade);
+    console.log(atividades);
+    setAtividades(atividades);
+
   }
     
   return (
@@ -33,7 +42,9 @@ function App() {
     <div className="mt-3">             
         <ul class="list-group">
           {atividades.map( ativ =>(
-            <li key={ativ.id} className="list-group-item">{ativ.id} - {ativ.descricao}</li>
+            <li key={ativ.id} className="list-group-item">
+              {ativ.id} - {ativ.descricao}
+            </li>
           ))}                   
         </ul>      
     </div>
