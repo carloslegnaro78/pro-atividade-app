@@ -31,10 +31,23 @@ function App() {
     
   return (
 <>
-    <form>
-        <input id='id' type='text' placeholder='id' />
-        <input id='descricao' type='text' placeholder='descricao' />
-        <button onClick={addAtiviade}>+ Atividade</button>
+    <form class="row g-3">
+      <div class="col-md-6">
+        <label for="id" class="form-label">Id</label>
+        <input id="id" type='text' class="form-control"  />
+      </div>
+      <div class="col-md-6">
+        <label for="inputEmail4" class="form-label">Descrição</label>
+        <input id="descricao" type="text" class="form-control"  />
+      </div>
+      <hr />
+      <div class="col-12">
+        <button 
+            className="btn btn-outline-secondary" 
+            onClick={addAtiviade}>
+              + Atividade
+        </button>
+      </div>
     </form>
     <div className='mt-3'>             
         <ul class='list-group'>
