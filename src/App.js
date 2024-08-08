@@ -51,7 +51,7 @@ function App() {
     </form>
     <div className='mt-3'> 
           {atividades.map( ativ => (            
-            <div key={ativ.id} className="card" style={{width: "18rem"}}>
+            <div key={ativ.id} className="card mb-2 shadow-sm">
               <div className="card-body">
                 <p className="card-text">
                   {ativ.id} - {ativ.descricao}
