@@ -31,9 +31,19 @@ nvm use 16.14.1
 node -v
 # deve exibir: v16.14.1
 
+https://react-bootstrap.netlify.app/docs/getting-started/introduction/
+
+# Bootstrap 5
+
+npm install bootstrap@5
+
+npm install react-bootstrap
+
+
 O Comando npx create-react-app {NomeProjeto} utiliza a última versão existente do React para criar o projeto.
 
 Executa o aplicativo no modo de desenvolvimento.\
 Abrir [http://localhost:3000](http://localhost:3000) para visualizá-lo no seu navegador.
 
 ### `npm start`
+
