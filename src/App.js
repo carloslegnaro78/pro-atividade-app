@@ -9,17 +9,16 @@ function App() {
     },
   ];
   return (
-    <div className='App'>
-      <header className='App-header'>
-        <ul>
-          <li>
+    <div className='mt-3'>
+      
+        <ul className='list-group'>
+          <li className='list-group-item'>
             {atividades[0].id} {atividades[0].descricao}
           </li>
-          <li onClick={() => console.log('JSX')}>Segunda Atividade</li>
-          <li>Terceira Atividade</li>
-          <li>Quarta Atividade</li>
-        </ul>
-      </header>
+          <li onClick={() => console.log('JSX')} className='list-group-item'>Segunda Atividade</li>
+          <li className='list-group-item'>Terceira Atividade</li>
+          <li className='list-group-item'>Quarta Atividade</li>
+        </ul>     
     </div>
   );
 }
