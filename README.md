@@ -39,6 +39,11 @@ npm install bootstrap@5
 
 npm install react-bootstrap
 
+npm list bootstrap
+bootstrap@5.3.8
+
+npm list react-bootstrap
+react-bootstrap@2.10.10
 
 O Comando npx create-react-app {NomeProjeto} utiliza a última versão existente do React para criar o projeto.
 
