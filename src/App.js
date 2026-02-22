@@ -10,19 +10,26 @@ function App() {
     {
       id: 2,
       descricao: 'Segunda Atividade',
-    },
-    {
-      id: 3,
-      descricao: 'Terceira Atividade',
-    },
+    },   
   ];
-  return (
 
+    function addAtividade(e) {
+      e.preventDefault();
+    const atividade = {
+      id: document.getElementById('id').value,
+      descricao: document.getElementById('descricao').value,
+    };
+   
+    atividades.push(atividade);
+     console.log(atividade);
+  }
+
+  return (
     <>
     <form>
       <input id='id' type='text' placeholder='id' />
-      <input id='descricao' type='text' placeholder='descricao' />
-      <button> + Atividade </button>
+      <input id='descricao' type='text' placeholder='descricao' />      
+      <button type='button' onClick={addAtividade}> + Atividade </button>
     </form>
     <div className='mt-3'>
       <ul className='list-group'>
