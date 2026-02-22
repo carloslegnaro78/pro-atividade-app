@@ -7,19 +7,33 @@ function App() {
       id: 1,
       descricao: 'Primeira Atividade',
     },
+    {
+      id: 2,
+      descricao: 'Segunda Atividade',
+    },
+    {
+      id: 3,
+      descricao: 'Terceira Atividade',
+    },
   ];
   return (
+
+    <>
+    <form>
+      <input id='id' type='text' placeholder='id' />
+      <input id='descricao' type='text' placeholder='descricao' />
+      <button> + Atividade </button>
+    </form>
     <div className='mt-3'>
-      
-        <ul className='list-group'>
-          <li className='list-group-item'>
-            {atividades[0].id} {atividades[0].descricao}
+      <ul className='list-group'>
+        {atividades.map(ativ => (
+          <li key={ativ.id} className='list-group-item'>
+            {ativ.id} - {ativ.descricao}
           </li>
-          <li onClick={() => console.log('JSX')} className='list-group-item'>Segunda Atividade</li>
-          <li className='list-group-item'>Terceira Atividade</li>
-          <li className='list-group-item'>Quarta Atividade</li>
-        </ul>     
+        ))}
+      </ul>
     </div>
+    </>
   );
 }
 
